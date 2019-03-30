@@ -6,7 +6,7 @@ Author:	Armando Minor (aminor1)
 Date:	03-29-19
 
 Description: java file for managing course statistics.
-*/ 
+*/  
 
 import java.util.ArrayList;
 import java.util.Arrays;
