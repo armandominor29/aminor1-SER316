@@ -1,14 +1,34 @@
 package main.java;
 
+/*
+File:	Course.java
+Author:	Armando Minor (aminor1)
+Date:	03-29-19
+
+Description: java file for managing course statistics.
+*/
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.NoSuchElementException;
 
-public class Main {
-    static HashMap<String, Student> students = new HashMap<>();
-    static HashMap<String, CourseGrades0> courses = new HashMap<>();
+/**
+Class:	Main
 
+Description:Creates students and courses for implementation 
+*/
+public class Main {
+     static HashMap<String, Student> students = new HashMap<>();
+     static HashMap<String, CourseGrades0> courses = new HashMap<>();
+
+    /**
+    Method: main
+    Inputs: args
+    Returns: n/a
+
+    Description: main executes methods in Course.java, Major.java, and Student.java.
+  */
     public static void main(String[] args)throws Exception {
 
         students.put("anna", new Student("anna", Major.valueOf("SER")));
@@ -37,7 +57,5 @@ public class Main {
         
         
         courses.get("SER315").printCourseStats();
-
-     
     }
 }
