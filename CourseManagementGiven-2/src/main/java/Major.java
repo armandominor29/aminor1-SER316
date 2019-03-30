@@ -9,7 +9,7 @@ Description: java file for defining majors.
 */
 
 /**
-Class:	Major
+Class:Major
 
 Description: defines types of Majors
 */
