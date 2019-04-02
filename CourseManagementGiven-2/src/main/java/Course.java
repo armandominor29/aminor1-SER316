@@ -72,7 +72,7 @@ public class Course {
     Returns: Returns first and only collection value if only one exists.
      		 If collection size is only of size 2 it will take both values and get the average.
      		 For anything of size greater than 2 it will sum the inputs from the array and return the average.
-
+			 Not including min and max values.
     Description: Method used to calculate average
   */
     public double calculateAverageWithoutMinWithoutMax() throws NullPointerException {
@@ -81,7 +81,7 @@ public class Course {
          int counter = 0;
          int min = Integer.MAX_VALUE;
          int max = Integer.MIN_VALUE;
-         
+         //SER316-start, was not considering values less than 0 and totalPoints calculation fixed
          if(collection.size() == 1){
         	 if (collection.get(0)<0) {
         		 return 0;
@@ -89,7 +89,7 @@ public class Course {
         	 else {
         		 return collection.get(0);
         	 }
-         }//END if
+         }
          
          else if (collection.size() == 2){
         	 if (collection.get(0)<0 && collection.get(1)>=0) {
@@ -98,34 +98,35 @@ public class Course {
         	 else if (collection.get(1)<0 && collection.get(0)>=0) {
         		 return collection.get(1);
         	 }
-        	 else if (collection.get(1)<0 && collection.get(0)<0) {
+        	 else if (collection.get(0)<0 && collection.get(1)<0) {
         		 return 0;
         	 }
         	 else {
         		 return (double)(collection.get(0) + collection.get(1))/2;
         	 }
     
-         } //end else if
+         }
          
          else {
         	 int allPoints = 0;
-        	 for(int point:collection) {
+        	 for(int point:collection) {       	
         		 if (point >= 0) {
-        			 counter = counter++;
         			 if (point < min) {
         				 min = point;
         			 }
         			 else if (point > max) {
         				 max = point;
         			 }
+        			 counter++;
         			 allPoints = allPoints + point;
         		 }
-        	 } //for
+        	 }
+        	 
         	 int totalPoints = allPoints-max-min;
-             return totalPoints/(double)(counter-1);
-         } //else
+             return (double)totalPoints/(counter-2);
          }
-    
+         }
+    //SER316-end 
     // REACH at least 95% Code coverage  (assign 3)
     // if student with the name (asurite member) is not yet included student needs to be added to student list 
     // sets points for a student 
@@ -145,11 +146,18 @@ public class Course {
     Description: returns valid student
   */
     ArrayList<Student> students  = new ArrayList<Student>();
+    //SER316-start, must not have students with the same name 
     public boolean addStudent(Student s) {
-        students.add(s);
-        points.put(s.getAsurite(), -1);
-        return true;
+    	if (Arrays.asList(students).contains(s.getAsurite())){
+    		return false;
+    	}
+    	else
+    		students.add(s);
+            points.put(s.getAsurite(), -1);
+            return true;
     }
+    
+    //SER316-end 
 
     /**
     Class:	GetPoints
