@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="test.java.CourseTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2019-04-02T06:43:41" hostname="armandos-air.lan" time="0.031">
+  <properties/>
+  <testcase name="testAverageWithoutMinWithoutMax" classname="test.java.CourseTest" time="0.025"/>
+  <testcase name="test_addStudent" classname="test.java.CourseTest" time="0.003"/>
+  <testcase name="test_set_points" classname="test.java.CourseTest" time="0.001"/>
+  <system-out><![CDATA[50
+-10
+-30
+70
+100
+-40
+-20
+-10
+80
+70
+30
+40
+50
+60
+30
+50
+60
+-40
+50
+50
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
