@@ -1,24 +1,22 @@
 package test.java;
 
-import static org.junit.Assert.*; 
-import java.util.Arrays;
-import java.util.Collection;
+import main.java.Course;
+import main.java.CourseGrades0;
+import main.java.CourseGrades1;
+import main.java.CourseGrades2;
+import main.java.CourseGrades3;
+import main.java.CourseGrades4;
+import main.java.CourseGrades5;
 import java.util.HashMap;
+import java.util.Collection;
+import java.util.Arrays;
 import org.junit.Before;
+import static org.junit.Assert.*; 
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import org.junit.runners.Parameterized.Parameters;
-
-import main.java.Course;
-import main.java.CourseGrades1;
-import main.java.CourseGrades2;
-import main.java.CourseGrades5;
-import main.java.CourseGrades4;
-import main.java.CourseGrades0;
-import main.java.CourseGrades3;
-
 import java.lang.reflect.Constructor;
+import org.junit.runners.Parameterized.Parameters;
 
 @RunWith(Parameterized.class)
 public class GivenBlackbox {
@@ -128,8 +126,8 @@ public class GivenBlackbox {
         zeroStudent.set_points("Orie",0);
         
         fractionStudents = createCourse("SER412");
-        fractionStudents.set_points("Katie",4/9);
-        fractionStudents.set_points("Orie",1/3);
+        fractionStudents.set_points("Katie",4 / 9);
+        fractionStudents.set_points("Orie",1 / 3);
         
         // this would be the expected result after the method countOccurencesLetterGrades is called
         twoStudentExpected.put("A", 2);

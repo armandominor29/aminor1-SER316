@@ -1,14 +1,14 @@
 package test.java;
 
+import main.java.Course;
+import main.java.Major;
+import main.java.Student;
+import org.junit.Test;
+
 import static org.junit.Assert.*;
 
 import org.junit.Before;
 
-import org.junit.Test;
-
-import main.java.Course;
-import main.java.Major;
-import main.java.Student;
 
 public class CourseTest {
     Course oneStudent;
@@ -93,16 +93,16 @@ public class CourseTest {
     
     @Test
     public void test_set_points() {
-	// oneStudent tests set_points LOC 133-134-135
-    oneStudent = new Course("SER316");
-    oneStudent.set_points("Hanna", 50);
-    double ans = oneStudent.calculateAverageWithoutMinWithoutMax();
-    assertTrue(ans == 50.0);
+	    // oneStudent tests set_points LOC 133-134-135
+        oneStudent = new Course("SER316");
+        oneStudent.set_points("Hanna", 50);
+        double ans = oneStudent.calculateAverageWithoutMinWithoutMax();
+        assertTrue(ans == 50.0);
     }
     
     @Test
     public void test_addStudent() {
-    	//Test students with same asurite
+        //Test students with same asurite
         listOfStudents = new Course("SER399");
         listOfStudents.set_points("Hannah", 50);
         Student Freddy = new Student("aminor1", Major.SER);
