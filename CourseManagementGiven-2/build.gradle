@@ -51,12 +51,6 @@ test {
  }
  checkstyle {
      toolVersion = "8.8"
-<<<<<<< HEAD
- }
-=======
-}
->>>>>>> StaticAnalysis
-
 
 ///////////////////////////////////////////////////////////////////////////
 // Configure SpotBugs
@@ -64,11 +58,6 @@ test {
 
 spotbugs {
    toolVersion = '3.1.12'
-<<<<<<< HEAD
- }
-=======
-}
->>>>>>> StaticAnalysis
 
  // To generate an HTML report instead of XML
  tasks.withType(com.github.spotbugs.SpotBugsTask) {
