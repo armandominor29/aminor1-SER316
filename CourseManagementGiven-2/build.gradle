@@ -1,8 +1,4 @@
-<<<<<<< HEAD
- plugins {
-=======
 plugins {
->>>>>>> StaticAnalysis
    id "com.github.spotbugs" version "1.6.11"
  }
 
@@ -51,6 +47,8 @@ test {
  }
  checkstyle {
      toolVersion = "8.8"
+}
+
 
 ///////////////////////////////////////////////////////////////////////////
 // Configure SpotBugs
@@ -58,6 +56,7 @@ test {
 
 spotbugs {
    toolVersion = '3.1.12'
+}
 
  // To generate an HTML report instead of XML
  tasks.withType(com.github.spotbugs.SpotBugsTask) {
