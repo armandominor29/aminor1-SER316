@@ -10,8 +10,6 @@ import main.java.Course;
 import main.java.Major;
 import main.java.Student;
 
-import java.util.ArrayList;
-
 public class CourseTest {
     Course oneStudent;
     Course oneStudentUnderZero;
@@ -19,12 +17,11 @@ public class CourseTest {
     Course twoStudents2;
     Course twoStudents3;
     Course twoStudents4;
-    Course threeStudents;
-    Course threeStudents2;
     Course fourStudents;
     Course fourStudents2;
-    Course newStudent;
     Course listOfStudents;
+    //SER316 TASK 2 SPOT-BUGS FIX (courses not
+    //used were removed
     
     @Before
     public void setUp() throws Exception {
