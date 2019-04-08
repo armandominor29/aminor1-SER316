@@ -1,8 +1,6 @@
 package test.java;
 
-import static org.junit.Assert.*;
-
-import java.util.ArrayList;
+import static org.junit.Assert.*; 
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashMap;
@@ -70,8 +68,8 @@ public class GivenBlackbox {
     Course noStudents;
     HashMap<String, Integer> noStudentsExpected = new HashMap<String, Integer>(); 
     
-    Course ExceedingStudents;
-    HashMap<String, Integer> ExceedingStudentsExpected = new HashMap<String, Integer>(); 
+    Course exceedingStudents;
+    HashMap<String, Integer> exceedingStudentExpected = new HashMap<String, Integer>(); 
     
     Course zeroStudent;
     HashMap<String, Integer> zeroStudentExpected = new HashMap<String, Integer>(); 
@@ -121,9 +119,9 @@ public class GivenBlackbox {
         
         noStudents = createCourse("SER214");
         
-        ExceedingStudents = createCourse("SER218");
-        ExceedingStudents.set_points("Ken",101);
-        ExceedingStudents.set_points("Doll",200);
+        exceedingStudents = createCourse("SER218");
+        exceedingStudents.set_points("Ken",101);
+        exceedingStudents.set_points("Doll",200);
         
         zeroStudent = createCourse("SER415");
         zeroStudent.set_points("Katie",0);
@@ -164,11 +162,11 @@ public class GivenBlackbox {
         noStudentsExpected.put("D", 0);
         noStudentsExpected.put("F", 0);
         
-        ExceedingStudentsExpected.put("A", 2);
-        ExceedingStudentsExpected.put("B", 0);
-        ExceedingStudentsExpected.put("C", 0);
-        ExceedingStudentsExpected.put("D", 0);
-        ExceedingStudentsExpected.put("F", 0);
+        exceedingStudentExpected.put("A", 2);
+        exceedingStudentExpected.put("B", 0);
+        exceedingStudentExpected.put("C", 0);
+        exceedingStudentExpected.put("D", 0);
+        exceedingStudentExpected.put("F", 0);
         
         zeroStudentExpected.put("A", 0);
         zeroStudentExpected.put("B", 0);
@@ -226,10 +224,10 @@ public class GivenBlackbox {
 
     //Testing exceeding student set
     @Test
-    public void ExceedingStudents() {
-        HashMap<String, Integer> ans = ExceedingStudents.countOccurencesLetterGrades();
-        System.out.println("TESTING ExceedingStudents" + ans);
-        assertTrue(ans.equals(ExceedingStudentsExpected));
+    public void exceedingStudents() {
+        HashMap<String, Integer> ans = exceedingStudents.countOccurencesLetterGrades();
+        System.out.println("TESTING exceedingStudents" + ans);
+        assertTrue(ans.equals(exceedingStudentExpected));
     }
 
     //Testing zero score student set

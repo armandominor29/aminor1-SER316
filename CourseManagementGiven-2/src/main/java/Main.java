@@ -7,9 +7,14 @@ Date:03-29-19
 
 Description: java file for managing course statistics.
  */
+<<<<<<< HEAD
 
 //SER316 TASK 2 SPOT-BUGS FIX
 //Removed unnecessary imports
+=======
+
+
+>>>>>>> StaticAnalysis
 import java.util.HashMap;
 
 
@@ -21,8 +26,12 @@ Description:Creates students and courses for implementation
 public class Main {
     static HashMap<String, Student> students = new HashMap<>();
     static HashMap<String, CourseGrades0> courses = new HashMap<>();
+<<<<<<< HEAD
     //SER316 TASK 2 SPOT-BUGS FIX
     //Removed unused HashMap
+=======
+
+>>>>>>> StaticAnalysis
     /**
     Method: main
     Inputs: args
@@ -46,13 +55,20 @@ public class Main {
         courses.put("SER316", new CourseGrades0("SER316"));
         courses.put("SER315", new CourseGrades0("SER315"));
         courses.put("SC232", new CourseGrades0("CS232"));
+<<<<<<< HEAD
         //SER316 TASK 2 SPOT-BUGS FIX
         //fixed Integer warning (Bad Practice Error)
+=======
+
+>>>>>>> StaticAnalysis
         int newInt = Integer.valueOf(40);
          
         
         System.out.println("Anna has scored "
+<<<<<<< HEAD
                 //SER316 TASK 2 SPOT-BUGS FIX
+=======
+>>>>>>> StaticAnalysis
             + newInt
             + " marks which makes her the topper.");
         courses.get("SER315").set_points("anna", 40);
