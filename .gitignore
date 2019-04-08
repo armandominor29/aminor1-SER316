@@ -1,5 +1,11 @@
 # Compiled class file
 *.class
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
 
 # Log file
 *.log
@@ -18,6 +24,7 @@
 *.zip
 *.tar.gz
 *.rar
+*.7z
 
 # MAC OS
 .DS_Store
