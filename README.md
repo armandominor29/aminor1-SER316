@@ -1,4 +1,4 @@
-#Showcase White Box and Black Box Test implementation.
+# Showcase White Box and Black Box Test implementation.
 
 .gitignore file included.
 
